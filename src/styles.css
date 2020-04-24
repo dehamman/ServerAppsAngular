@@ -21,7 +21,13 @@ body {
 router-outlet + *  {
   padding: 0 16px;
 }
-
+.notes-cont
+{
+  width:50%;
+  float:right;
+  position: absolute;
+  left:54%;
+}
 /* Text */
 
 h1 {

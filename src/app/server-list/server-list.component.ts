@@ -10,9 +10,7 @@ import { servers } from '../servers';
 export class ServerListComponent {
   servers = servers;
 
-  details() {
-    window.alert('Server details');
-  }
+  
 }
 
 

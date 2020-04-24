@@ -1,0 +1,18 @@
+ul{
+  list-style-type: none;
+  width:50%;
+  padding:0;
+  position:absolute;
+}
+li{
+  float:left;
+  background-color:#607080;
+  margin-right:2%;
+  margin-bottom:0.3em;
+  padding:0.3em;
+  width:48%;
+  overflow:hidden;
+}
+span{
+  
+}

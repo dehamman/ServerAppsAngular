@@ -1,9 +1,9 @@
 <h3>
-{{server.name}}
+{{app.name}}
 </h3>
-<div *ngIf="server.data">
+<div *ngIf="app.data">
 <ul>
-  <li *ngFor="let dat of server.data">
+  <li *ngFor="let dat of app.data">
     {{dat.field}}
     <br/>
     {{dat.value}}
@@ -12,5 +12,5 @@
 </div>
 <div class="notes-cont">
   <h4>Notes:</h4>
-  <span>{{server.description}}</span>
+  <span>{{app.description}}</span>
 </div>

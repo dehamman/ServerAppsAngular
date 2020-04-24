@@ -1,6 +1,6 @@
 <div *ngFor="let app of apps;index as appidx">
   <h3>
-    <a [title]="app.name + ' details'" [routerLink]="['apps',appidx]">
+    <a [title]="app.name + ' details'" [routerLink]="['/apps',appidx]">
       {{ app.name }}
     </a>
   </h3>

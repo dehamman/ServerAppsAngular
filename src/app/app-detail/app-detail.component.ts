@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { apps } from '../apps';
 
 @Component({
   selector: 'app-app-detail',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppDetailComponent implements OnInit {
 
-  constructor() { }
+  app;
+
+  constructor(private route: ActivatedRoute,) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+    this.app = apps[+params.get('appidx')];
+  });
   }
 
 }
