@@ -1,15 +1,14 @@
 <h3>
 {{app.name}}
 </h3>
-<div *ngIf="app.data">
-<ul>
+
+<ul *ngIf="app.data">
   <li *ngFor="let dat of app.data">
     {{dat.field}}
     <br/>
     {{dat.value}}
   </li>
 </ul>
-</div>
 <div class="notes-cont">
   <h4>Notes:</h4>
   <span>{{app.description}}</span>
