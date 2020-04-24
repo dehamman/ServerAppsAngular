@@ -1,0 +1,15 @@
+<h2>Servers</h2>
+
+<div *ngFor="let server of servers">
+  <h3>
+    <a [title]="server.name + ' details'">
+      {{ server.name }}
+    </a>
+  </h3>
+  <p *ngIf="server.description">
+    Description: {{ server.description }}
+  </p>
+  <button (click)="details()">
+    Details
+  </button>
+</div>
