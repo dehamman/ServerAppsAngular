@@ -6,6 +6,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ServerListComponent } from './server-list/server-list.component';
+import { ServerDetailComponent } from './server-detail/server-detail.component';
+import { AppListComponent } from './app-list/app-list.component';
+import { AppDetailComponent } from './app-detail/app-detail.component';
 
 @NgModule({
   imports: [
@@ -13,12 +16,19 @@ import { ServerListComponent } from './server-list/server-list.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ServerListComponent },
+      { path: 'details/:serveridx', component: ServerDetailComponent },
+      { path: 'apps', component: AppListComponent },
+      { path: 'apps/:appidx', component: AppDetailComponent },
+      
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    ServerListComponent
+    ServerListComponent,
+    ServerDetailComponent,
+    AppListComponent,
+    AppDetailComponent
   ],
   bootstrap: [ AppComponent ]
 })

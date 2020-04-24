@@ -1,15 +1,10 @@
-<h2>Servers</h2>
-
-<div *ngFor="let server of servers">
+<div *ngFor="let server of servers;index as serveridx">
   <h3>
-    <a [title]="server.name + ' details'">
+    <a [title]="server.name + ' details'" [routerLink]="['details',serveridx]">
       {{ server.name }}
     </a>
   </h3>
   <p *ngIf="server.description">
     Description: {{ server.description }}
   </p>
-  <button (click)="details()">
-    Details
-  </button>
 </div>

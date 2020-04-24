@@ -1,0 +1,15 @@
+<h3>
+{{server.name}}
+</h3>
+<div *ngIf="server.data" style="border:solid 1px">
+<ul>
+  <li *ngFor="let dat of server.data">
+    {{dat.field}}
+    <br/>
+    {{dat.value}}
+  </li>
+</ul>
+</div>
+<div style="border:solid 1px">
+  <span>{{server.description}}</span>
+</div>
