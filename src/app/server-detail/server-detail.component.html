@@ -3,7 +3,7 @@
 </h3>
 <ul *ngIf="server.data">
   <li *ngFor="let dat of server.data">
-    {{dat.field}}
+    <span>{{dat.field}}:</span>
     <br/>
     {{dat.value}}
   </li>
