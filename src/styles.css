@@ -23,7 +23,7 @@ router-outlet + *  {
 }
 .notes-cont
 {
-  width:50%;
+  width:45%;
   float:right;
   position: absolute;
   left:54%;
