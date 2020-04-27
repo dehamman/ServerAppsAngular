@@ -1,6 +1,10 @@
 <h3>
 {{server.name}}
 </h3>
+<div>
+  Last Patched On: {{server.lastPatched}}
+</div>
+<br/>
 <ul *ngIf="server.data">
   <li *ngFor="let dat of server.data">
     <span>{{dat.field}}:</span>

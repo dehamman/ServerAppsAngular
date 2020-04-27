@@ -3,8 +3,12 @@
     <a [title]="server.name + ' details'" [routerLink]="['details',serveridx]">
       {{ server.name }}
     </a>
+    <span *ngIf="server.lastPatched">
+      Last Patched: {{ server.lastPatched }}
+    </span>
   </h3>
+  
   <p *ngIf="server.description">
-    Description: {{ server.description }}
+    Notes: {{ server.description }}
   </p>
 </div>
