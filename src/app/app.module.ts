@@ -9,6 +9,7 @@ import { ServerListComponent } from './server-list/server-list.component';
 import { ServerDetailComponent } from './server-detail/server-detail.component';
 import { AppListComponent } from './app-list/app-list.component';
 import { AppDetailComponent } from './app-detail/app-detail.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { AppDetailComponent } from './app-detail/app-detail.component';
     ServerListComponent,
     ServerDetailComponent,
     AppListComponent,
-    AppDetailComponent
+    AppDetailComponent,
+    SearchComponent
   ],
   bootstrap: [ AppComponent ]
 })
