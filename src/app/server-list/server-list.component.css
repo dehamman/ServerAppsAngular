@@ -2,3 +2,15 @@ span{
   float:right;
   font-size:0.9m;
 }
+.fancy-button{
+  font-size:1.3em;
+  margin-top:0.5em;
+}
+input{
+  position: relative;
+  top:-2.5px;
+  height:2.9em;
+}
+.flt-right{
+  float: right;
+}

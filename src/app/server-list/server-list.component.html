@@ -1,3 +1,9 @@
+<input type="text" id="newName" placeholder="New Name"/>
+<a class="button fancy-button" title="Add new">+</a>
+<div>
+  <a class="button fancy-button"><i class="material-icons">sort_by_alpha</i></a>
+  <a class="button fancy-button flt-right"><i class="material-icons">sort_by_alpha</i></a>
+</div>
 <div *ngFor="let server of servers;index as serveridx">
   <h3>
     <a [title]="server.name + ' details'" [routerLink]="['details',serveridx]">

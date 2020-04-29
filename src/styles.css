@@ -66,6 +66,8 @@ input {
   padding: 8px;
   margin-bottom: 16px;
   border: 1px solid #BDBDBD;
+  color:#030405;
+  height:2.9em;
 }
 
 label {
