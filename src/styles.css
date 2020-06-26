@@ -60,7 +60,7 @@ a:hover {
 
 /* Input */
 
-input {
+input, textarea {
   background-color: #f0f0f0;
   font-size: 14px;
   border-radius: 2px;

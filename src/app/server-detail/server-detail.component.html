@@ -1,3 +1,4 @@
+<div *ngIf="server">
 <h3>
 {{server.name}}
 </h3>
@@ -16,3 +17,5 @@
   <h4>Notes:</h4>
   <span>{{server.description}}</span>
 </div>
+</div>
+<div *ngIf="!server">Loading entry...</div>
