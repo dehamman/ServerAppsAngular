@@ -7,10 +7,10 @@
   </div>
   <br/>
   <ul *ngIf="server.data">
-    <li *ngFor="let dat of server.data">
-      <span>{{dat.key}}:</span>
+    <li *ngFor="let dat of server.data;index as idx">
+      <span>{{ dat.key }}:</span>
       <br/>
-      {{dat.value}}
+      {{ dat.value }}
     </li>
   </ul>
   <div class="notes-cont">
