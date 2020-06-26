@@ -1,21 +1,21 @@
 <div *ngIf="server">
-<h3>
-{{server.name}}
-</h3>
-<div>
-  Last Patched On: {{server.lastPatched}}
-</div>
-<br/>
-<ul *ngIf="server.data">
-  <li *ngFor="let dat of server.data">
-    <span>{{dat.field}}:</span>
-    <br/>
-    {{dat.value}}
-  </li>
-</ul>
-<div class="notes-cont">
-  <h4>Notes:</h4>
-  <span>{{server.description}}</span>
-</div>
+  <h3>
+  {{server.name}}
+  </h3>
+  <div>
+    Last Patched On: {{server.lastPatched}}
+  </div>
+  <br/>
+  <ul *ngIf="server.data">
+    <li *ngFor="let dat of server.data">
+      <span>{{dat.key}}:</span>
+      <br/>
+      {{dat.value}}
+    </li>
+  </ul>
+  <div class="notes-cont">
+    <h4>Notes:</h4>
+    <span>{{server.description}}</span>
+  </div>
 </div>
 <div *ngIf="!server">Loading entry...</div>
