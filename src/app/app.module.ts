@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -15,11 +16,12 @@ import { SearchComponent } from './search/search.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: ServerListComponent },
-      { path: 'details/:serveridx', component: ServerDetailComponent },
+      { path: 'details/:id', component: ServerDetailComponent },
       { path: 'apps', component: AppListComponent },
-      { path: 'apps/:appidx', component: AppDetailComponent },
+      { path: 'apps/:id', component: AppDetailComponent },
       
     ])
   ],

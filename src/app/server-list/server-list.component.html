@@ -1,20 +1,21 @@
-<input type="text" id="newName" placeholder="New name"/>
-<a class="button fancy-button" title="Add new">+</a>
+<input #newName type="text" id="newName" placeholder="New name"/>
+<a class="button fancy-button" title="Add new" (click)="addServer(newName.value)">+</a>
+<p *ngIf="!servers"><em>Loading...</em></p>
 <div>
-  <a class="button fancy-button"><i class="material-icons">sort_by_alpha</i></a>
-  <a class="button fancy-button flt-right"><i class="material-icons">sort_by_alpha</i></a>
+	<a class="button fancy-button"><i class="material-icons">sort_by_alpha</i></a>
+	<a class="button fancy-button flt-right"><i class="material-icons">sort_by_alpha</i></a>
 </div>
 <div *ngFor="let server of servers;index as serveridx">
-  <h3>
-    <a [title]="server.name + ' details'" [routerLink]="['details',serveridx]">
-      {{ server.name }}
-    </a>
-    <span *ngIf="server.lastPatched">
-      Last Patched: {{ server.lastPatched }}
-    </span>
-  </h3>
-  
-  <p *ngIf="server.description">
-    Notes: {{ server.description }}
-  </p>
+	<h3>
+		<a [title]="server.name + ' details'" [routerLink]="['details',server.id]">
+			{{ server.name }}
+		</a>
+		<span *ngIf="server.lastPatched">
+        Last Patched: {{ server.lastPatched }}
+      </span>
+	</h3>
+
+	<p *ngIf="server.description">
+		Notes: {{ server.description }}
+	</p>
 </div>
