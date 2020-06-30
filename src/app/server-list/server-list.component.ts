@@ -25,7 +25,7 @@ export class ServerListComponent implements OnInit {
   addServer(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    var entry: MetaEntry = { name:name,dateCreated:new Date(), id:-1, entryTypeId:-1, description:""};
+     var entry: MetaEntry = { name:name,dateCreated:new Date(), id:-1, entryTypeId:1, description:"", entryType:"",data:[]};
     this.meService.saveServer(entry)
       .subscribe(result => {
         if (result > 0) {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { servers } from '../servers';
+import { MetaEntryService } from '../services/metaEntry.service';
+import { MetaEntry } from '../models';
 
 @Component({
   selector: 'app-server-detail',
@@ -11,12 +12,16 @@ export class ServerDetailComponent implements OnInit {
 
   server;
 
-  constructor(private route: ActivatedRoute,) { }
+  constructor(private route: ActivatedRoute,private meService: MetaEntryService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-    this.server = servers[+params.get('serveridx')];
+    this.getServer(+params.get('id'));
   });
+  }
+
+  getServer(id: number): void {
+    this.meService.getEntry(id).subscribe(result => this.server = result);
   }
 
 }

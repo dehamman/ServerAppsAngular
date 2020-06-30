@@ -1,9 +1,9 @@
-export interface KeyValue{
+export class KeyValue{
   id: number;
   key: string;
   value: string;
 }
-export interface MetaEntry {
+export class MetaEntry {
   id: number;
   entryTypeId: number;
   name: string;
